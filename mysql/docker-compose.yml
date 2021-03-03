@@ -1,14 +1,21 @@
-version: '3'
+version: "3"
 services:
   mysql:
-    image: 'mysql:latest'
-    restart: always
+    container_name: mysql.docker
+    image: "mysql:5.7"
+    #restart: always
     volumes:
-      - './mysql_data:/var/lib/mysql'
+      - "./mysql_data:/var/lib/mysql"
     environment:
       - MYSQL_ROOT_PASSWORD=1234
       #- MYSQL_DATABASE: 'my_db'
       #- MYSQL_USER: 'user'
       #- MYSQL_PASSWORD: '1234'
     ports:
-      - '3306:3306'
+      - "3307:3306"
+    networks:
+      my_network:
+        ipv4_address: 172.100.0.104
+networks:
+  my_network:
+    external: true

@@ -11,8 +11,8 @@ services:
       #- MYSQL_DATABASE: 'my_db'
       #- MYSQL_USER: 'user'
       #- MYSQL_PASSWORD: '1234'
-    ports:
-      - "3306:3306"
+    #ports:
+    #  - "3316:3306"
     networks:
       my_network:
         ipv4_address: 172.100.0.103

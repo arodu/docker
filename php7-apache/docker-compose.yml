@@ -3,7 +3,7 @@ services:
   php7:
     build: ./
     container_name: php7.docker
-    restart: always
+    #restart: always
     volumes:
       #- ./www:/var/www/html
       - /srv/http:/var/www/html/public
