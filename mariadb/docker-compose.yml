@@ -3,7 +3,7 @@ services:
   mysql:
     container_name: mariadb.docker
     image: "mariadb:latest"
-    restart: always
+    #restart: always
     volumes:
       - "./mysql_data:/var/lib/mysql"
     environment:
