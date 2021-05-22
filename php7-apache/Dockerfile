@@ -11,6 +11,10 @@ RUN apt install -y apt-utils sendmail mariadb-client \
   pngquant unzip zip libpng-dev libmcrypt-dev git curl libicu-dev \
   libxml2-dev libssl-dev sqlite libpq-dev postgresql-client
 
+RUN apt install -y libjpeg-dev
+
+RUN docker-php-ext-configure gd --with-jpeg
+
 # Install PHP extensions
 # RUN docker-php-ext-install mysqli bcmath gd intl xml curl pdo_mysql pdo_sqlite hash zip dom session opcache
 RUN docker-php-ext-install gd intl pdo pdo_mysql pdo_pgsql pgsql mysqli

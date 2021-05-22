@@ -5,8 +5,10 @@ services:
     container_name: php7.docker
     #restart: always
     volumes:
-      #- ./www:/var/www/html
+      #- ./www:/var/www/html/public
       - /srv/http:/var/www/html/public
+      #- ~/Sites:/var/www/sites/public
+      #- ~/sites:/var/www/html/public
       - ~/.ssh:/root/.ssh
     ports:
       - "80:80"
