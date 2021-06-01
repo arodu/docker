@@ -1,6 +1,6 @@
 version: "3"
 services:
-  php7:
+  php7_www:
     build: ./
     container_name: php7.docker
     #restart: always
@@ -16,7 +16,7 @@ services:
       WEB_DOCUMENT_ROOT: /var/www/html/public
     networks:
       my_network:
-        ipv4_address: 172.100.0.115
+        ipv4_address: 172.100.0.11
 networks:
   my_network:
     external: true

@@ -8,11 +8,11 @@ services:
       - "./postgres_data:/var/lib/postgresql/data"
     environment:
       - POSTGRES_PASSWORD=1234
-    #ports:
-    #  - "5432:5432"
+    ports:
+      - "5432:5432"
     networks:
       my_network:
-        ipv4_address: 172.100.0.101
+        ipv4_address: 172.100.0.21
 networks:
   my_network:
     external: true
